@@ -1,7 +1,12 @@
 import React from 'react';
-import { IProps } from './types/types-view';
 import PrimaryButton from '../../buttons/PrimaryButton';
 import styles from "./cart-preview.module.scss";
+import Product from './types/Product';
+import ItemPreview from "./ItemPreview"
+
+type IProps = {
+  products: Product[];
+}
 
 const View: React.FC<IProps> = ({ products }) => {
   const emptyCart = (
@@ -14,17 +19,7 @@ const View: React.FC<IProps> = ({ products }) => {
     <div>
       {products.map(product => {
         return (
-          <div>
-            <div className={styles.container}>
-              <img src={product.imageUrl} alt="Product Preview" width="100"/>
-            </div>
-            <div className={styles.descriptionContainer}>
-            {product.name}
-            </div>
-            <div className={styles.priceContainer}>
-            </div>
-            Price
-          </div>
+          <ItemPreview product={product}/>
         )
       })}
       <PrimaryButton>Checkout Securely</PrimaryButton>
@@ -32,7 +27,7 @@ const View: React.FC<IProps> = ({ products }) => {
   );
 
   return (
-    <div className="cart-preview-container">
+    <div className={styles.container}>
       {products.length > 0 ? cartWithItems : emptyCart}
     </div>
   )
