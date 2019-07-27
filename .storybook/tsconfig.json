@@ -31,5 +31,8 @@
     "src/setupTests.ts",
     "**/*/*.test.ts",
     "examples"
+  ],
+  "files": [
+    "../src/react-app-env.d.ts"
   ]
 }
