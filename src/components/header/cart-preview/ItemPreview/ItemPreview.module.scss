@@ -31,14 +31,16 @@
 }
 
 .attributeTerm {
-  @extend .col-sm-4;
+  @extend .col-sm-3;
   color: gray;
-  font-weight: normal;
+  font-weight: lighter;
+  font-size: smaller;
 }
 
 .attributeDefinition {
-  @extend .col-sm-8;
+  @extend .col-sm-9;
   margin-bottom: 0px;
+  font-size: smaller;
 }
 
 .seperator {
