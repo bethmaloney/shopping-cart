@@ -30,17 +30,19 @@
   @extend .row;
 }
 
+$attributeFontSize: smaller;
+
 .attributeTerm {
   @extend .col-sm-3;
   color: gray;
   font-weight: lighter;
-  font-size: smaller;
+  font-size: $attributeFontSize;
 }
 
 .attributeDefinition {
   @extend .col-sm-9;
   margin-bottom: 0px;
-  font-size: smaller;
+  font-size: $attributeFontSize;
 }
 
 .seperator {
