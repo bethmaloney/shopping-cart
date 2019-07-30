@@ -3,5 +3,6 @@
 .container {
   @extend .shadow-sm, .mb-5, .bg-white, .rounded;
   width: 400px;
-  height: 200px;
+  max-height: 500px;
+  padding-bottom: 15px;
 }

@@ -6,13 +6,21 @@ import Product from './types/Product';
 const products : Product[] = [
   {
     id: 1,
-    name: "Bag",
-    imageUrl: "https://via.placeholder.com/150"
+    name: "Paul Ryan",
+    description: "Messenger Bag",
+    colour: "Black",
+    imageUrl: "https://via.placeholder.com/150",
+    quantity: 1,
+    price: 100
   },
   {
     id: 2,
-    name: "Umbrella",
-    imageUrl: "https://via.placeholder.com/150"
+    name: "Peter Henderson",
+    description: "Classic Straight Jeans",
+    size: "32w",
+    imageUrl: "https://via.placeholder.com/150",
+    quantity: 1,
+    price: 299.99
   }
 ]
 

@@ -17,11 +17,10 @@ const View: React.FC<IProps> = ({ products }) => {
 
   const cartWithItems = (
     <div>
-      {products.map(product => {
-        return (
-          <ItemPreview product={product}/>
-        )
-      })}
+      {
+        products.map(product =>
+          <ItemPreview product={product} key={product.id} />)
+      }
       <PrimaryButton>Checkout Securely</PrimaryButton>
     </div>
   );
