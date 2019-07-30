@@ -1,5 +1,7 @@
 # Shopping Site
 
+[![Build status](https://dev.azure.com/bethmaloney/shopping-cart/_apis/build/status/Storyboard)](https://dev.azure.com/bethmaloney/shopping-cart/_build/latest?definitionId=1)
+
 Uses the following technologies
 * React
 * Sass
