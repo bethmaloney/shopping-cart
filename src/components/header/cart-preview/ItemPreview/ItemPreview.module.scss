@@ -1,13 +1,15 @@
+$grid-gutter-width: 10px;
+
 @import "~bootstrap/scss/bootstrap.scss";
 
 .productContainer {
   @extend .clearfix;
+  @extend .row;
 }
 
 .imageContainer {
-  float: left;
-  width: 100px;
-  height: 130px;
+  @extend .col-3;
+  @extend .align-self-center;
 
   img {
     max-width: 100%;
@@ -16,14 +18,12 @@
 }
 
 .descriptionContainer {
-  float: left;
-  width: 170px;
-  padding-left: 5px;
+  @extend .col-6;
 }
 
 .priceContainer {
+  @extend .col-3;
   text-align: right;
-  width: 100%;
   font-weight: bold;
 }
 
@@ -33,6 +33,7 @@
 
 .attributeList {
   @extend .row;
+  margin-bottom: 0px;
 }
 
 $attributeFontSize: smaller;
@@ -52,4 +53,8 @@ $attributeFontSize: smaller;
 
 .seperator {
   margin-top: 0px;
+}
+
+.buttonContainer {
+  @extend .col-sm
 }

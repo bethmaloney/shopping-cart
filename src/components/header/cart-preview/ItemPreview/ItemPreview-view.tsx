@@ -21,10 +21,10 @@ const createListElement = (term: string, definition?: string) => {
 
 const View: React.FC<Prop> = ({ product }) => {
   return (
-    <div>
+    <div className="container">
       <div className={styles.productContainer}>
         <div className={styles.imageContainer}>
-          <img src={product.imageUrl} alt="Product Preview"/>
+          <img src={product.imageUrl} alt="Product Preview" />
         </div>
         <div className={styles.descriptionContainer}>
           <p>
@@ -38,10 +38,14 @@ const View: React.FC<Prop> = ({ product }) => {
           </dl>
         </div>
         <div className={styles.priceContainer}>
-          $ {product.price}
+          ${product.price}
         </div>
       </div>
-      <button className="btn btn-link btn-sm">Remove</button>
+      <div className="row">
+        <div className={styles.buttonContainer}>
+          <button className="btn btn-link btn-sm">Remove</button>
+        </div>
+      </div>
       <hr className={styles.seperator} />
     </div>
   )

@@ -1,9 +1,16 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
 .container {
-  @extend .shadow-sm, .mb-5, .bg-white, .rounded;
+  @extend .shadow-sm, .bg-white, .rounded;
   width: 400px;
   max-height: 500px;
   padding-bottom: 15px;
   padding-top: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.buttonContainer {
+  margin-left: 10px;
+  margin-right: 10px;
 }

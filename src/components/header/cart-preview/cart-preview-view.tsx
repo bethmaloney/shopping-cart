@@ -10,7 +10,7 @@ type IProps = {
 
 const View: React.FC<IProps> = ({ products }) => {
   const emptyCart = (
-    <div>
+    <div className={styles.buttonContainer}>
       <PrimaryButton>Continue Shopping</PrimaryButton>
     </div>
   );
@@ -21,7 +21,9 @@ const View: React.FC<IProps> = ({ products }) => {
         products.map(product =>
           <ItemPreview product={product} key={product.id} />)
       }
-      <PrimaryButton>Checkout Securely</PrimaryButton>
+      <div className={styles.buttonContainer}>
+        <PrimaryButton>Checkout Securely</PrimaryButton>
+      </div>
     </div>
   );
 
