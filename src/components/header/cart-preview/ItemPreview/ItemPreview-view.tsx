@@ -24,7 +24,7 @@ const View: React.FC<Prop> = ({ product }) => {
     <div>
       <div className={styles.productContainer}>
         <div className={styles.imageContainer}>
-          <img src={product.imageUrl} alt="Product Preview" width="100" />
+          <img src={product.imageUrl} alt="Product Preview"/>
         </div>
         <div className={styles.descriptionContainer}>
           <p>

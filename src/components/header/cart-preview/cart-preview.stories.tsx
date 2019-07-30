@@ -9,7 +9,7 @@ const products: Product[] = [
     name: "Paul Ryan",
     description: "Messenger Bag",
     colour: "Black",
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl: "https://via.placeholder.com/200x300",
     quantity: 1,
     price: 100
   },
