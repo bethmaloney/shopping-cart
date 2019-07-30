@@ -3,7 +3,7 @@ import * as React from 'react';
 import CartPreview from './index';
 import Product from './types/Product';
 
-const products : Product[] = [
+const products: Product[] = [
   {
     id: 1,
     name: "Paul Ryan",
@@ -24,10 +24,18 @@ const products : Product[] = [
   }
 ]
 
+const addCart = (cart: JSX.Element) => {
+  return (
+    <div style={{ padding: 10 }}>
+      {cart}
+    </div>
+  );
+}
+
 storiesOf("CartPreview", module)
   .add("with no products", () => (
-    <CartPreview products = {[]} />
+    addCart((<CartPreview products={[]} />))
   ))
   .add("with products", () =>
-    <CartPreview products = {products} />
+    addCart((<CartPreview products={products} />))
   )
