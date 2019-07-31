@@ -2,14 +2,12 @@
 
 [![Build status](https://dev.azure.com/bethmaloney/shopping-cart/_apis/build/status/Storyboard)](https://dev.azure.com/bethmaloney/shopping-cart/_build/latest?definitionId=1)
 
-Uses the following technologies
-* React
-* Sass
-* Typescript
-* Storybook
+Simple drop down cart preview which are common on ecommerce sites. Implemented using React and Typescript.
 
-Storybook of components is available at http://storyboard.shoppingcart.bethanymaloney.com.s3-website-ap-southeast-2.amazonaws.com/
+Bootstrap and Sass are used for styling the components. Sass stylesheets are created at the component level and loaded using CSS modules. Sass allows for the overriding of Bootstrap default settings as needed. CSS modules prevent name collisions and allow the isolation of styles.
 
-Uses Azure Devops to automatically publish to an S3 bucket as part of a CI/CD pipeline.
+Storybook is used for viewing components individually. Components can be viewed at http://storyboard.shoppingcart.bethanymaloney.com
+
+Azure Devops automatically builds every push to main and any pull requests. Additionally a commit to main will result in the automatic deployment of to an S3 bucket as part of a CI/CD pipeline. DNS is registered through Route 53.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
