@@ -1,5 +1,7 @@
 import React from 'react';
 import PrimaryButton from '../../buttons/PrimaryButton';
+import { faShoppingBag } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const View: React.FC = () => {
   return (
@@ -22,6 +24,9 @@ const View: React.FC = () => {
           <input className="form-control mr-sm-2" type="search" placeholder="Search Items" aria-label="Search" />
           <PrimaryButton>Search</PrimaryButton>
         </form>
+        <div className="nav-item nav-link">
+          <FontAwesomeIcon icon={faShoppingBag} size="2x"/>
+        </div>
       </div>
     </nav>
   )
