@@ -2,6 +2,7 @@ import React from 'react';
 import PrimaryButton from '../../buttons/PrimaryButton';
 import { faShoppingBag } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import styles from "./menu.module.scss";
 
 const View: React.FC = () => {
   return (
@@ -17,14 +18,17 @@ const View: React.FC = () => {
             <a className="nav-link" href="#">Home</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Link</a>
+            <a className="nav-link" href="#">Store Locator</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="#">Returns Policy</a>
           </li>
         </ul>
         <form className="form-inline my-2 my-lg-0">
           <input className="form-control mr-sm-2" type="search" placeholder="Search Items" aria-label="Search" />
           <PrimaryButton>Search</PrimaryButton>
         </form>
-        <div className="nav-item nav-link">
+        <div className={styles.shoppingBag}>
           <FontAwesomeIcon icon={faShoppingBag} size="2x"/>
         </div>
       </div>
