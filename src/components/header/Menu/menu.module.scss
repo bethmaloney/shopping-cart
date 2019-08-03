@@ -3,5 +3,5 @@
 .shoppingBag {
   @extend .nav-item;
   @extend .nav-link;
-  cursor: pointer;
+  @extend .btn;
 }
