@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import View from "./menu-view";
 
 const State: React.FC = () => {
-
   const [showCart, setCartVisible] = useState(false);
 
   return (

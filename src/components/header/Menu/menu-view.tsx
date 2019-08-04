@@ -1,6 +1,6 @@
-import React from 'react';
-import PrimaryButton from '../../buttons/PrimaryButton';
-import { faShoppingBag } from '@fortawesome/free-solid-svg-icons'
+import React from "react";
+import PrimaryButton from "../../buttons/PrimaryButton";
+import { faShoppingBag } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./menu.module.scss";
 import CartPreview from "./../cart-preview";
