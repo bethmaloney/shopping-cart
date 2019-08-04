@@ -10,8 +10,8 @@ const View: React.FC = () => {
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
-      <a className="navbar-brand" href="#">Fälschung</a>
 
+      <a className="navbar-brand" href="#">Fälschung</a>
 
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
@@ -29,11 +29,14 @@ const View: React.FC = () => {
           <input className="form-control mr-sm-2" type="search" placeholder="Search Items" aria-label="Search" />
           <PrimaryButton>Search</PrimaryButton>
         </form>
-
       </div>
+
       <button className={styles.shoppingBag}>
-          <FontAwesomeIcon icon={faShoppingBag} size="2x"/>
-        </button>
+        <span className="fa-layers fa-fw fa-2x">
+          <FontAwesomeIcon icon={faShoppingBag} />
+          <span className="fa-layers-counter fa-layers-bottom-right">3</span>
+        </span>
+      </button>
     </nav>
   )
 }
