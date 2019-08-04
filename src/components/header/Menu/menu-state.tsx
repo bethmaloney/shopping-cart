@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import View from "./menu-view";
 
 const State: React.FC = () => {
+
+  const [showCart, setCartVisible] = useState(false);
+
   return (
-    <View showCart={false} cartPreviewClicked={() => {}}/>
+    <View showCart={showCart} cartPreviewClicked={() => setCartVisible(!showCart)} />
   )
 };
 
