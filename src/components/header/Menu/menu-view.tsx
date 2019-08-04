@@ -3,8 +3,14 @@ import PrimaryButton from '../../buttons/PrimaryButton';
 import { faShoppingBag } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./menu.module.scss";
+import CartPreview from "./../cart-preview";
 
-const View: React.FC = () => {
+type Props = {
+  showCart: boolean;
+  cartPreviewClicked: () => void;
+}
+
+const View: React.FC<Props> = ({ showCart, cartPreviewClicked }) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,12 +37,16 @@ const View: React.FC = () => {
         </form>
       </div>
 
-      <button className={styles.shoppingBag}>
-        <span className="fa-layers fa-fw fa-2x">
-          <FontAwesomeIcon icon={faShoppingBag} />
-          <span className="fa-layers-counter fa-layers-bottom-right">3</span>
-        </span>
-      </button>
+
+      <div>
+        <button className={styles.shoppingBag} onClick={cartPreviewClicked}>
+          <span className="fa-layers fa-fw fa-2x">
+            <FontAwesomeIcon icon={faShoppingBag} />
+            <span className="fa-layers-counter fa-layers-bottom-right">3</span>
+          </span>
+        </button>
+        {showCart ? <CartPreview products={[]} /> : ''}
+      </div>
     </nav>
   )
 }

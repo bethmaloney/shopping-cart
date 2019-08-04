@@ -1,3 +1,3 @@
-import Menu from './menu-view';
+import Menu from './menu-state';
 
 export default Menu;
