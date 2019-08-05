@@ -34,8 +34,8 @@ const addCart = (cart: JSX.Element) => {
 
 storiesOf("CartPreview", module)
   .add("with no products", () => (
-    addCart((<CartPreview products={[]} />))
+    addCart((<CartPreview />))
   ))
   .add("with products", () =>
-    addCart((<CartPreview products={products} />))
+    addCart((<CartPreview />))
   )
