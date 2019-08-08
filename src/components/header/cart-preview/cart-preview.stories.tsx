@@ -2,6 +2,9 @@ import { storiesOf } from '@storybook/react';
 import * as React from 'react';
 import CartPreview from './index';
 import Product from './types/Product';
+import { Provider } from 'react-redux';
+import createStore from './../../../store';
+import { CartActionTypes } from '../../../store/cart/types';
 
 const products: Product[] = [
   {
@@ -24,18 +27,24 @@ const products: Product[] = [
   }
 ]
 
-const addCart = (cart: JSX.Element) => {
+const addCart = (cart: JSX.Element, products?: Product[]) => {
+  const store = createStore();
+  if(products) {
+    products.forEach(product => store.dispatch<CartActionTypes>({type: "ADD_PRODUCT", payload: product}));
+  }
   return (
-    <div style={{ padding: 10 }}>
-      {cart}
-    </div>
+    <Provider store={store}>
+      <div style={{ padding: 10 }}>
+        {cart}
+      </div>
+    </Provider>
   );
 }
 
 storiesOf("CartPreview", module)
-  .add("with no products", () => (
+  .add("with no products", () =>
     addCart((<CartPreview />))
-  ))
+  )
   .add("with products", () =>
-    addCart((<CartPreview />))
+    addCart((<CartPreview />), products)
   )
