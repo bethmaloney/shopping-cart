@@ -2,10 +2,6 @@
 
 .container {
   @extend .shadow-sm, .bg-white, .rounded;
-  position: fixed; /* Stay in place */
-  z-index: 100; /* Sit on top */
-  right: 10px;
-  bottom: 30px;
   width: 400px;
   max-height: 500px;
   padding-bottom: 15px;

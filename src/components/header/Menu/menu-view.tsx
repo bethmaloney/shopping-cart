@@ -45,7 +45,7 @@ const View: React.FC<Props> = ({ showCart, cartPreviewClicked }) => {
             <span className="fa-layers-counter fa-layers-bottom-right">3</span>
           </span>
         </button>
-        {showCart ? <CartPreview /> : ''}
+        {showCart ? <div className={styles.cartPreviewContainer}><CartPreview /></div> : ''}
       </div>
     </nav>
   )

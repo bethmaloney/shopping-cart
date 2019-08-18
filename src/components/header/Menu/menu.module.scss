@@ -5,3 +5,10 @@
   @extend .nav-link;
   @extend .btn;
 }
+
+.cartPreviewContainer {
+  position: fixed; /* Stay in place */
+  z-index: 100; /* Sit on top */
+  right: 10px;
+  bottom: 30px;
+}
