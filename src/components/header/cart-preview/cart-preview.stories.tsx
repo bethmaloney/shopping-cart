@@ -1,9 +1,8 @@
-import { storiesOf, RenderFunction } from '@storybook/react';
+import { storiesOf } from '@storybook/react';
 import * as React from 'react';
 import CartPreview from './index';
 import Product from './types/Product';
-import { Provider, useDispatch } from 'react-redux';
-import createStore from './../../../store';
+import { useDispatch } from 'react-redux';
 import { CartActionTypes } from '../../../store/cart/types';
 
 const products: Product[] = [
@@ -27,18 +26,7 @@ const products: Product[] = [
   }
 ]
 
-
-const withProvider = (story: RenderFunction) => {
-  const store = createStore();
-  return (
-    <Provider store={store}>
-      {story()}
-    </Provider>
-  )
-}
-
 storiesOf("CartPreview", module)
-  .addDecorator(withProvider)
   .add("with no products", () => <CartPreview />)
   .add("with products", () =>
     React.createElement(() => {
