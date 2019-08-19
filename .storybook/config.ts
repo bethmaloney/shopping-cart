@@ -1,4 +1,5 @@
 import { configure, addDecorator } from "@storybook/react";
+require("bootstrap");
 import "../src/main.scss";
 import withRedux from "./addons/withRedux";
 

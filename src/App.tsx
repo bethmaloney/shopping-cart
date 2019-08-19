@@ -1,4 +1,5 @@
 import React from 'react';
+require("bootstrap")
 import logo from './logo.svg';
 import './App.css';
 
