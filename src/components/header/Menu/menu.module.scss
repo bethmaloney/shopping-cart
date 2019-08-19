@@ -7,8 +7,8 @@
 }
 
 .cartPreviewContainer {
-  position: fixed; /* Stay in place */
-  z-index: 100; /* Sit on top */
+  position: absolute;
+  z-index: 100;
   right: 10px;
-  bottom: 30px;
+  top: 70px;
 }
