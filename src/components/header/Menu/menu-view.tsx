@@ -8,9 +8,10 @@ import CartPreview from "./../cart-preview";
 type Props = {
   showCart: boolean;
   cartPreviewClicked: () => void;
+  productCount: number;
 }
 
-const View: React.FC<Props> = ({ showCart, cartPreviewClicked }) => {
+const View: React.FC<Props> = ({ showCart, cartPreviewClicked, productCount }) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,12 +38,14 @@ const View: React.FC<Props> = ({ showCart, cartPreviewClicked }) => {
         </form>
       </div>
 
-
       <div>
         <button className={styles.shoppingBag} onClick={cartPreviewClicked}>
           <span className="fa-layers fa-fw fa-2x">
             <FontAwesomeIcon icon={faShoppingBag} />
-            <span className="fa-layers-counter fa-layers-bottom-right">3</span>
+            {productCount > 0 ?
+              <span className="fa-layers-counter fa-layers-bottom-right">{productCount}</span>
+              : ''
+            }
           </span>
         </button>
         {showCart ? <div className={styles.cartPreviewContainer}><CartPreview /></div> : ''}
