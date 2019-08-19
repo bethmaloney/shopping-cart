@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import View from "./menu-view";
 import { useSelector } from "react-redux";
 import { AppState } from "../../../store";
-import { Product } from "../../../store/cart/types";
 
 const State: React.FC = () => {
   const [showCart, setCartVisible] = useState(false);

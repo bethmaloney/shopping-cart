@@ -27,8 +27,7 @@ const products: Product[] = [
 
 
 storiesOf("Menu", module)
-  .add("No Items", () => <Menu />
-  )
+  .add("No Items", () => <Menu />)
   .add("Some Items", () =>
     React.createElement(() => {
       const dispatch = useDispatch()
