@@ -1,11 +1,10 @@
 import React from 'react';
 import View from './cart-preview-view';
-import { useSelector } from 'react-redux';
-import { AppState } from '../../../store';
+import { useAppSelector } from '../../../store';
 import Product from './types/Product';
 
 const State: React.FC = () => {
-  const products = useSelector<AppState, Product[]>(state => state.cart.products);
+  const products = useAppSelector<Product[]>(state => state.cart.products);
 
   return (
     <View products={products} />

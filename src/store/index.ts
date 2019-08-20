@@ -1,5 +1,6 @@
 import { combineReducers, createStore } from 'redux'
 import { cartReducer } from "./cart/reducers";
+import { TypedUseSelectorHook, useSelector } from 'react-redux';
 
 
 const rootReducer = combineReducers({
@@ -15,3 +16,8 @@ export default function configureStore() {
 
   return store;
 }
+
+/**
+ * useSelector that's typed to the AppState
+ */
+export const useAppSelector: TypedUseSelectorHook<AppState> = useSelector;
