@@ -1,0 +1,10 @@
+@import "~bootstrap/scss/bootstrap.scss";
+
+.imageContainer {
+  @extend .align-self-center;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}

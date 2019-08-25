@@ -6,8 +6,8 @@ const products = (numberOfProducts = 20) => {
   return Array.from({length: numberOfProducts}, (v, k) => {
     return {
       id: k,
-      imageUrl: faker.image.fashion(),
-      description: faker.commerce.product(),
+      imageUrl: "https://via.placeholder.com/600x600.png",
+      description: faker.commerce.productName(),
       price: faker.random.number({min: 100, max: 1500, precision: 2})
     }
   });
