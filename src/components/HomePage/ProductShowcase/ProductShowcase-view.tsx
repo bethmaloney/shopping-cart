@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./ProductShowcase.module.scss";
 import PrimaryButton from "../../buttons/PrimaryButton";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingBag, faPlus } from "@fortawesome/free-solid-svg-icons";
 
 export type Product = {
   id: number;
@@ -21,8 +23,11 @@ const View: React.FC<Props> = ({ products }) => {
             <img src={product.imageUrl} />
           </div>
           <div>
-            <span>{product.price}</span>
-            <PrimaryButton />
+            <span className={styles.price}>{product.price}</span>
+            <PrimaryButton className={styles.addToCartButton}>
+              <FontAwesomeIcon icon={faPlus}/>
+              <FontAwesomeIcon icon={faShoppingBag} />
+            </PrimaryButton>
           </div>
         </div>
       </div>
@@ -32,7 +37,7 @@ const View: React.FC<Props> = ({ products }) => {
   return (
     <div className="row">
       {products.map(product =>
-        <div className="col-sm-4">
+        <div className="col-sm-3">
           {createCard(product)}
         </div>
       )}
