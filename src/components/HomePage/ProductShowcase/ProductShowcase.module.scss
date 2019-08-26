@@ -22,8 +22,9 @@
 
 .price {
   @extend .h5;
-  @extend .align-middle;
-  float: left;
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
 }
 
 .cardBottom {

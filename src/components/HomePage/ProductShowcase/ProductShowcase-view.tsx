@@ -20,7 +20,7 @@ const View: React.FC<Props> = ({ products }) => {
         <h5 className={styles.productTitle}>{product.description}</h5>
         <img className="card-img" src={product.imageUrl} />
         <div className={styles.cardBottom}>
-          <span className={styles.price}>${product.price}</span>
+          <p className={styles.price}>${product.price}</p>
           <PrimaryButton className={styles.addToCartButton}>
             <FontAwesomeIcon icon={faPlus} /> <FontAwesomeIcon icon={faShoppingBag} />
           </PrimaryButton>
