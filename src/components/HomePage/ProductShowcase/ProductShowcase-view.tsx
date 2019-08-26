@@ -17,18 +17,13 @@ const View: React.FC<Props> = ({ products }) => {
   const createCard = (product: Product) => {
     return (
       <div className="card">
-        <div className="card-body">
-          <h5 className="card-title">{product.description}</h5>
-          <div className={styles.imageContainer}>
-            <img src={product.imageUrl} />
-          </div>
-          <div>
-            <span className={styles.price}>{product.price}</span>
-            <PrimaryButton className={styles.addToCartButton}>
-              <FontAwesomeIcon icon={faPlus}/>
-              <FontAwesomeIcon icon={faShoppingBag} />
-            </PrimaryButton>
-          </div>
+        <h5 className="card-title">{product.description}</h5>
+        <img className="card-img" src={product.imageUrl} />
+        <div className={styles.cardBottom}>
+          <span className={styles.price}>${product.price}</span>
+          <PrimaryButton className={styles.addToCartButton}>
+            <FontAwesomeIcon icon={faPlus} /> <FontAwesomeIcon icon={faShoppingBag} />
+          </PrimaryButton>
         </div>
       </div>
     )
