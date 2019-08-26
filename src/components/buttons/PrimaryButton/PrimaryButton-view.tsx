@@ -1,8 +1,8 @@
 import React from 'react';
 import { IProps } from "./types";
 
-const View: React.FC<IProps> = ({ children = "Click Me", upperCase = true }) => {
-  let classes = "btn btn-primary"
+const View: React.FC<IProps> = ({ children = "Click Me", upperCase = true, className = '' }) => {
+  let classes = `btn btn-primary ${className}`
 
   if(upperCase === true) {
     classes = classes + " text-uppercase"
