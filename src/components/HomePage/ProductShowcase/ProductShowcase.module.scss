@@ -1,5 +1,21 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
+.productShowCaseContainer {
+  @extend .row;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.productCard {
+  @extend .card;
+  margin-top: 1rem;
+}
+
+.productTitle {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
 .addToCartButton {
   float: right;
 }

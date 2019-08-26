@@ -16,8 +16,8 @@ type Props = { products: Product[] }
 const View: React.FC<Props> = ({ products }) => {
   const createCard = (product: Product) => {
     return (
-      <div className="card">
-        <h5 className="card-title">{product.description}</h5>
+      <div className={styles.productCard}>
+        <h5 className={styles.productTitle}>{product.description}</h5>
         <img className="card-img" src={product.imageUrl} />
         <div className={styles.cardBottom}>
           <span className={styles.price}>${product.price}</span>
@@ -30,7 +30,7 @@ const View: React.FC<Props> = ({ products }) => {
   }
 
   return (
-    <div className="row">
+    <div className={styles.productShowCaseContainer}>
       {products.map(product =>
         <div className="col-sm-3">
           {createCard(product)}
