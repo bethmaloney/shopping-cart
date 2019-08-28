@@ -2,7 +2,7 @@ import React from "react";
 
 const View: React.FC = () => {
   return (
-    <div></div>
+    <h1>Could not find page!</h1>
   )
 }
 
