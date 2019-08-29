@@ -4,6 +4,7 @@ import { faShoppingBag } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./menu.module.scss";
 import CartPreview from "./../cart-preview";
+import { A } from "hookrouter";
 
 type Props = {
   showCart: boolean;
@@ -18,12 +19,12 @@ const View: React.FC<Props> = ({ showCart, cartPreviewClicked, productCount }) =
         <span className="navbar-toggler-icon"></span>
       </button>
 
-      <a className="navbar-brand" href="#">Fälschung</a>
+      <A className="navbar-brand" href="/">Fälschung</A>
 
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item">
-            <a className="nav-link" href="#">Home</a>
+            <A className="nav-link" href="/">Home</A>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="#">Store Locator</a>
