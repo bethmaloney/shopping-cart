@@ -1,0 +1,8 @@
+@import "~bootstrap/scss/bootstrap.scss";
+@import "../../utility/styles.module.scss";
+
+.productImage {
+  @extend .imageContainer;
+  @extend .col-sm-6;
+  height: 500px;
+}
