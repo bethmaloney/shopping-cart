@@ -9,6 +9,11 @@
 .productCard {
   @extend .card;
   margin-top: 1rem;
+
+  &:hover {
+    border-width: thin;
+    border-color: black;
+  }
 }
 
 .productTitle {

@@ -3,6 +3,7 @@ import styles from "./ProductShowcase.module.scss";
 import PrimaryButton from "../../buttons/PrimaryButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingBag, faPlus } from "@fortawesome/free-solid-svg-icons";
+import { A } from "hookrouter";
 
 export type Product = {
   id: number;
@@ -25,6 +26,7 @@ const View: React.FC<Props> = ({ products }) => {
             <FontAwesomeIcon icon={faPlus} /> <FontAwesomeIcon icon={faShoppingBag} />
           </PrimaryButton>
         </div>
+        <A href={`/product/${product.id}`} className="stretched-link"></A>
       </div>
     )
   }
