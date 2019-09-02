@@ -15,7 +15,23 @@ const State: React.FC<Props> = ({ id }) => {
         description: "It's very very exciting",
         imageUrl: `https://via.placeholder.com/500x1200.png?text=Exciting Product`
       },
-      productInstances: []
+      productInstances: [
+        {
+          price: 20.00,
+          colour: "Red",
+          size: "Large"
+        },
+        {
+          price: 20.00,
+          colour: "Red",
+          size: "Small"
+        },
+        {
+          price: 20.00,
+          colour: "Red",
+          size: "Medium"
+        }
+      ]
     }
   }
 
