@@ -6,3 +6,21 @@
   @extend .col-sm-6;
   height: 500px;
 }
+
+.productName {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0px;
+  text-align: left;
+}
+
+.productDescription {
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.price {
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
