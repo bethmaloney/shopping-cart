@@ -20,7 +20,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.1.0",
-    "react-scripts": "3.0.1",
+    "react-scripts": "5.0.1",
     "typescript": "3.5.2"
   },
   "scripts": {
@@ -48,7 +48,7 @@
   },
   "devDependencies": {
     "@storybook/addons": "^5.1.9",
-    "@storybook/react": "^5.1.9",
+    "@storybook/react": "^7.0.9",
     "@types/storybook__react": "^4.0.2",
     "awesome-typescript-loader": "^5.2.1",
     "react-docgen-typescript-loader": "^3.1.0",
